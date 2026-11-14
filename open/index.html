@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>仲間の釣果｜釣れタップ</title><meta name="description" content="釣れタップで仲間から届いた釣果">
+<style>
+:root{--bg:#f4fafd;--fg:#0d2940;--muted:#4a6b80;--line:#cfe3ee;--accent:#0a70a8;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0b2236;--fg:#e6f5fa;--muted:#9cc2d9;--line:#1f4a66;--accent:#80d6f5;--card:#0f3350}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:1.6rem;line-height:1.3;margin:0 0 8px}h2{font-size:1.15rem;margin:2em 0 .5em;padding-top:.5em;border-top:1px solid var(--line)}
+a{color:var(--accent)}table{width:100%;border-collapse:collapse;margin:1em 0;font-size:.92rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:.95rem;margin-bottom:24px}footer{margin-top:48px;color:var(--muted);font-size:.85rem}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:14px 28px;border-radius:999px;font-size:1.1rem}.muted{color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+</style></head><body><main>
+<nav><a href="../">釣れタップ</a><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a></nav>
+<h1>仲間から釣果が届きました</h1>
+<p id="what">釣れタップで取り込めます。</p>
+<p><a id="openApp" class="btn" href="tsuritap://open">釣れタップで開く</a></p>
+<div class="card"><strong>釣れタップを持っていないとき</strong>
+<p>釣れタップは、釣れた魚をタップひとつで記録する iPhone のアプリです。入れてから、もう一度このリンクを開いてください。</p>
+<p><a href="../">釣れタップについて</a></p></div>
+<p class="muted">LINE で開いたときは、右下（または右上）のメニューから「Safari で開く」を選ぶと、アプリが開きやすくなります。</p>
+<script>
+(function(){
+  var h = location.hash.slice(1);
+  if (!h) { document.getElementById('what').textContent = 'リンクの中に釣果が見つかりませんでした。届いたリンクをもう一度開いてください。'; return; }
+  document.getElementById('openApp').href = 'tsuritap://open#' + h;
+})();
+</script>
+
+<footer>釣れタップ ／ 運営：Tatsuya Suzuki ／ お問い合わせ：<a href="mailto:tatsuya.apps@icloud.com">tatsuya.apps@icloud.com</a></footer>
+</main></body></html>
